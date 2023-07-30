@@ -10,6 +10,8 @@ pip install selenium
 Если при установке селениума выдает ошибку: возможно, нужно обновить pip, для этого юзаем pip install --upgrade pip
 pip install selenium-webdriver
 pip install webdriver-manager
+По ассертам https://qaa-engineer.ru/kakie-vidy-assert-mozhno-ispolzovat-v-pytest/
+
 '''
 
 driver = webdriver.Chrome()
@@ -32,6 +34,9 @@ time.sleep(2)
 
 add_to_cart_sauce_labs_backpack = driver.find_element(By.XPATH, "//button[@data-test='add-to-cart-sauce-labs-backpack']")
 add_to_cart_sauce_labs_backpack.click()
+time.sleep(2)
+sauce_Labs_Bolt_T_Shirt = driver.find_element(By.XPATH, "//button[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']")
+sauce_Labs_Bolt_T_Shirt.click()
 time.sleep(2)
 sopping_badge = driver.find_element(By.XPATH, "//span[@class='shopping_cart_badge']")
 sopping_badge.click()
